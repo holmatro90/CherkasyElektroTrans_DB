@@ -26,6 +26,7 @@ CREATE TABLE `employe` (
   `employe_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Employe ID',
   `position_id` int(10) unsigned NOT NULL COMMENT 'Position ID',
   `employe_name` varchar(127) NOT NULL COMMENT 'Employe Name',
+  `employe_last_name` varchar(127) NOT NULL COMMENT 'Employe Last Name',
   `position_start_date` date DEFAULT NULL COMMENT 'Employe Position Start Date',
   `dob` date DEFAULT NULL COMMENT 'Date Of Birth',
   PRIMARY KEY (`employe_id`),
@@ -40,7 +41,7 @@ CREATE TABLE `employe` (
 
 LOCK TABLES `employe` WRITE;
 /*!40000 ALTER TABLE `employe` DISABLE KEYS */;
-INSERT INTO `employe` VALUES (1,1,'Ivan Bulkin','1999-05-13','1989-04-14'),(2,1,'Petrik Pyatochkin','2001-08-23','1995-02-28'),(3,1,'Don Carleone','1979-07-03','1999-12-12'),(4,2,'Ivan Durak','1999-03-08','1986-04-05'),(5,1,'Tommy Vercetti','2002-10-29','1979-07-24'),(6,3,'Sonny Forelli','2002-10-29','1969-10-19'),(7,1,' Carl \"CJ\" Johnson','2004-10-26','1988-06-13'),(8,4,'Big Smoke','2004-10-26','1984-02-11'),(9,5,'Jason Statham','1997-08-12','1967-07-26'),(10,1,'Lewis Carl Hamilton','2008-11-02','1985-01-07'),(11,1,'Michael Schumacher','2001-10-13','1969-01-03');
+INSERT INTO `employe` VALUES (1,1,'Ivan ','Bulkin','1999-05-13','1989-04-14'),(2,1,'Petrik ','Pyatochkin','2001-08-23','1995-02-28'),(3,1,'Don ','Carleone','1979-07-03','1999-12-12'),(4,2,'Ivan ','Durak','1999-03-08','1986-04-05'),(5,1,'Tommy ','Vercetti','2002-10-29','1979-07-24'),(6,3,'Sonny','Forelli','2002-10-29','1969-10-19'),(7,1,'Carl \"CJ\" ','Johnson','2004-10-26','1988-06-13'),(8,4,'Big ','Smoke','2004-10-26','1984-05-11'),(9,5,'Jason ','Statham','1997-08-12','1967-07-26'),(10,1,'Lewis Carl ','Hamilton','2008-11-02','1985-01-07'),(11,1,'Michael ','Schumacher','2001-10-13','1969-01-03');
 /*!40000 ALTER TABLE `employe` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -185,4 +186,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-14  0:38:58
+-- Dump completed on 2019-12-17  1:33:34
