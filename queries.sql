@@ -42,13 +42,13 @@ ORDER BY total_days DESC;
 
 /*get overall (total) income by transport, average income and a number of working days in the descending order;*/
 
-SELECT t.trasport_number,
+SELECT t.transport_number,
        SUM(et.income)         AS transport_income,
        AVG(et.income)         AS average_transport_income,
        COUNT(et.transport_id) AS transport_working_days
 FROM employe_transport AS et
          INNER JOIN transport AS t ON t.transport_id = et.transport_id
-GROUP BY t.trasport_number
+GROUP BY t.transport_number
 ORDER BY transport_working_days DESC;
 
 
