@@ -42,6 +42,8 @@ ORDER BY total_days DESC;
 
 /*get overall (total) income by transport, average income and a number of working days in the descending order;*/
 
+ALTER TABLE transport ADD UNIQUE INDEX `TRANSPORT_NUMBER` (transport_number);
+
 SELECT t.transport_number,
        SUM(et.income)         AS transport_income,
        AVG(et.income)         AS average_transport_income,
